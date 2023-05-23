@@ -50,3 +50,17 @@ updateContact("manju","gowda");
 //display all contacts
 console.log("After data update");
 contactArray.forEach(contact => console.log(contact));
+
+
+//search the firstname & delete
+var searchName = "mihir";
+for (var n = 0 ; n < contactArray.length ; n++) {
+    if (contactArray[n].firstName == searchName) {
+      var removedObject = contactArray.splice(n,1);
+      removedObject = null;
+      break;
+    }
+}
+//display all contacts
+console.log("After delete");
+contactArray.forEach(contact => console.log(contact));
