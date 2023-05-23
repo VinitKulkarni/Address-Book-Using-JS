@@ -64,3 +64,8 @@ for (var n = 0 ; n < contactArray.length ; n++) {
 //display all contacts
 console.log("After delete");
 contactArray.forEach(contact => console.log(contact));
+
+
+//count contacts
+var totalContacts = contactArray.reduce((count) => count + 1, 0);
+console.log("total contacts:",totalContacts);
