@@ -35,3 +35,18 @@ let contactArray = [
 
 //display all contacts
 contactArray.forEach(contact => console.log(contact));
+
+
+//search & edit
+function updateContact( FirstNameValue, changeLastName ) {
+    for (var i in contactArray) {
+      if (contactArray[i].firstName == FirstNameValue) {
+         contactArray[i].lastName = changeLastName;
+         break;
+      }
+    }
+ }
+updateContact("manju","gowda");
+//display all contacts
+console.log("After data update");
+contactArray.forEach(contact => console.log(contact));
