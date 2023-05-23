@@ -69,3 +69,20 @@ contactArray.forEach(contact => console.log(contact));
 //count contacts
 var totalContacts = contactArray.reduce((count) => count + 1, 0);
 console.log("total contacts:",totalContacts);
+
+
+
+//search by city
+var getContactsByCity = (cityName) => {
+    return contactArray
+      .filter((contact) => contact.city == cityName)
+      .map((contact) => {
+        return {
+          name: contact.firstName
+        };
+    });
+};
+//search by city method call
+var cityName = "banglore";
+var contactsInCity = getContactsByCity(cityName);
+console.log(`Contacts in ${cityName}:`, JSON.stringify(contactsInCity));
