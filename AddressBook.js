@@ -86,3 +86,20 @@ var getContactsByCity = (cityName) => {
 var cityName = "banglore";
 var contactsInCity = getContactsByCity(cityName);
 console.log(`Contacts in ${cityName}:`, JSON.stringify(contactsInCity));
+
+
+
+//search by state
+var getContactsByState = (stateName) => {
+    return contactArray
+      .filter((contact) => contact.state == stateName)
+      .map((contact) => {
+        return {
+          name: contact.firstName
+        };
+    });
+};
+//search by city method call
+var stateName = "MH";
+var contactsInState = getContactsByState(stateName);
+console.log(`Contacts in ${stateName}:`, JSON.stringify(contactsInState));
