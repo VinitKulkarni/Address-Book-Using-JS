@@ -24,5 +24,14 @@ class Contact{
     }
 }
 
-let contact1 = new Contact("vinit","kulkarni","street1","banglore","KA","90344","8902498032","vinit@gmail.com");
-console.log(contact1);
+//contacts array
+let contactArray = [
+    new Contact("vinit","kulkarni","street1","banglore","KA","90344","8902498032","vinit@gmail.com"),
+    new Contact("mihir","ambli","street2","delhi","HR","989344","9992498032","mihir@gmail.com"),
+    new Contact("manju","reddy","street3","hubli","KA","90554","8902888032","manju@gmail.com"),
+    new Contact("pavan","kulkarni","street4","mumbai","MH","55344","8907778032","pavan@gmail.com"),
+    new Contact("sandeep","patil","street5","banglore","KA","90355","7772498032","sandeep@gmail.com"),
+];
+
+//display all contacts
+contactArray.forEach(contact => console.log(contact));
