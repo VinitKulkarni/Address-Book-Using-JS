@@ -37,6 +37,9 @@ let contactArray = [
 contactArray.forEach(contact => console.log(contact));
 
 
+console.log("-------------------------------");
+
+
 //search & edit
 function updateContact( FirstNameValue, changeLastName ) {
     for (var i in contactArray) {
@@ -52,6 +55,9 @@ console.log("After data update");
 contactArray.forEach(contact => console.log(contact));
 
 
+console.log("-------------------------------");
+
+
 //search the firstname & delete
 var searchName = "mihir";
 for (var n = 0 ; n < contactArray.length ; n++) {
@@ -65,12 +71,13 @@ for (var n = 0 ; n < contactArray.length ; n++) {
 console.log("After delete");
 contactArray.forEach(contact => console.log(contact));
 
+console.log("-------------------------------");
 
 //count contacts
 var totalContacts = contactArray.reduce((count) => count + 1, 0);
 console.log("total contacts:",totalContacts);
 
-
+console.log("-------------------------------");
 
 //search by city
 var getContactsByCity = (cityName) => {
@@ -87,7 +94,7 @@ var cityName = "banglore";
 var contactsInCity = getContactsByCity(cityName);
 console.log(`Contacts in ${cityName}:`, JSON.stringify(contactsInCity));
 
-
+console.log("-------------------------------");
 
 //search by state
 var getContactsByState = (stateName) => {
@@ -103,3 +110,14 @@ var getContactsByState = (stateName) => {
 var stateName = "MH";
 var contactsInState = getContactsByState(stateName);
 console.log(`Contacts in ${stateName}:`, JSON.stringify(contactsInState));
+
+console.log("-------------------------------");
+
+var byName = contactArray.slice(0);
+byName.sort(function(a,b) {
+    var x = a.firstName.toLowerCase();
+    var y = b.firstName.toLowerCase();
+    return x < y ? -1 : x > y ? 1 : 0;
+});
+console.log('by name:');
+console.log(byName);
